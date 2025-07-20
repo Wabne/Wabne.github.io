@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url(https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=DynaPuff:wght@400..700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Playpen+Sans+Deva:wght@100..800&display=swap);
@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "DM Serif Text", serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -335,6 +335,124 @@ section {
   width: 100vw;
   height: calc(100vh - 5vw);
 }
+#courses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#courses .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#courses .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23vw;
+  height: 75vh;
+  padding: 2.5vw;
+  border-radius: 1.25vw;
+  box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  text-align: center;
+}
+
+#courses .card:hover {
+  transform: scale(1.1);
+}
+
+#courses .card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  transform: skewY(-5deg) scale(1.5);
+}
+
+#courses .title {
+  z-index: 2;
+}
+
+#courses .title h2 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: DynaPuff, system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.25vw;
+  position: relative;
+  z-index: 2;
+}
+
+#courses .option {
+  position: relative;
+  z-index: 2;
+}
+
+#courses .option ul {
+  margin: 0;
+  padding: 0;
+}
+
+#courses .option ul li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+#courses .option ul li::before {
+  content: "\2713";
+  margin-right: 0.5vw;
+}
+
+.card a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color: #000;
+  width: fit-content;
+  line-height: 3.5vw;
+  border-radius: 3.5vw;
+  padding: 0 2.5vw;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5vw;
+  font-weight: 700;
+  box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card-container:first-child .card {
+  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+.card-container:nth-child(2) .card {
+  background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.card-container:nth-child(3) .card {
+  background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+.card-container:first-child .card a {
+  background: linear-gradient(45deg, #ccd828, #10ebc3);
+}
+.card-container:nth-child(2) .card a {
+  background: linear-gradient(-30deg, #a2cbff, #e5ff00);
+  color: #270c3a;
+}
+.card-container:nth-child(3) .card a {
+  background: linear-gradient(-90deg, #ff0, #0fa);
+}
 #about-us {
   position: relative;
   overflow: hidden;
@@ -364,7 +482,7 @@ section {
   color: #797979;
 }
 .about-content p {
-  font-size: 1.5vw;
+  font-size: 1.698vw;
   line-height: 2.5vw;
 }
 .animated-text {
@@ -1390,6 +1508,7 @@ computercode button {
   padding: 0.3vw;
   cursor: pointer;
 }
+
 @media (orientation: portrait) {
   html {
     scroll-padding-top: 10vw;
@@ -1477,6 +1596,25 @@ computercode button {
   }
   #courses {
     height: calc((100vh - 10vw) * 2);
+    flex-direction: column;
+  }
+  #courses .card {
+    height: 55vh;
+    width: 45vw;
+    border-radius: 5vw;
+  }
+  #courses .title h2 {
+    font-size: 6.5vw;
+  }
+  #courses .courses-text i,
+  #courses .option ul li {
+    font-size: 3.5vw;
+  }
+  #courses .card a {
+    font-size: 4.5vw;
+    border-radius: 5vw;
+    padding: 2.5vw;
+    margin-bottom: 2vw;
   }
   #about-us {
     height: calc((100vh - 10vw) / 2);
@@ -1883,7 +2021,7 @@ computercode button {
 }
 @media (orientation: portrait) and (max-width: 513px) {
   .head-text {
-    font-size: 9vw;
+    font-size: 8vw;
   }
   .head-underline::after {
     height: 0.5vw;
@@ -1937,9 +2075,6 @@ computercode button {
   .kmau-main-box-wrapper {
     margin-block: 3.1vw;
   }
-  .\ {
-    font-size: 5vw;
-  }
   .kmau-main-box-p {
     font-size: 4vw;
     line-height: 6vw;
@@ -1966,5 +2101,22 @@ computercode button {
     height: fit-content;
     padding: 2vw;
     margin: 2.4vw auto;
+  }
+  #courses .card {
+    height: 27.5vh;
+    width: 50vw;
+    border-radius: 5vw;
+  }
+  #courses .title h2 {
+    font-size: 6.5vw;
+  }
+  #courses .option ul li {
+    font-size: 3.5vw;
+  }
+  #courses .card a {
+    font-size: 4.5vw;
+    border-radius: 5vw;
+    padding: 2.5vw;
+    margin-bottom: 2vw;
   }
 }
