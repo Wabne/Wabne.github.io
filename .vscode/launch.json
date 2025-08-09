@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "BrowserSync Background",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "start-browser-sync",
+      "program": "${workspaceFolder}",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
+      "stopOnEntry": false
+    }
+  ]
+}
