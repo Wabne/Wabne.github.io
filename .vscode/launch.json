@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "BrowserSync Background",
+      "name": "Static",
       "type": "node",
       "request": "launch",
       "preLaunchTask": "start-browser-sync",
