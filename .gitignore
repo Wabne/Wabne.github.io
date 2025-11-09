@@ -1,7 +1,5 @@
 .vscode
 node_modules
-vendor/
-composer.json
-composer.lock
 .prettierrc
+prettierrc.json
 .py
