@@ -1,1 +1,602 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta content="width=device-width,initial-scale=1" name="viewport"><title>Wabne - Class 6 - Computer Science - Chapter 7</title><link href="/style.css" rel="stylesheet"><script defer="defer" src="/script.js"></script><link href="/favicon.gif" rel="shortcut icon" type="image/x-icon"><nav><a href="/"><img alt="Logo" class="logo" src="/favicon.gif"></a><div class="title">Wabne</div><ul class="nav-menu"><li><a class="nav-link" href="/#home">Home</a></li><li><a class="nav-link" href="/#courses">Courses</a></li><li><a class="nav-link" href="/#about-us">About Us</a></li><li><a class="nav-link" href="/#choose-div">Why Us?</a></li></ul><div class="hamburger"><span class="bar"></span> <span class="bar"></span> <span class="bar"></span></div></nav><section class="chapter"><h1>C++</h1><img class="paspo" src="/cpp.png"><p>C++ extends C with object-oriented features, stronger type checks, and libraries for data structures, algorithms, and more. It is used in software ranging from operating systems to games. Programs are saved with a <em>.cpp</em> extension and compiled with compilers like g++. Clear structure in C++ means organizing code into functions and classes with readable naming. This chapter introduces basics such as output with <code>cout</code>, variables, conditions, loops, functions, and ends with a subtraction calculator as the final example.</p><h2>Hello world</h2><p>The first program includes <code>iostream</code> for input and output and uses <code>cout</code>.</p><computercode aria-label="Code block code1" class="computercode" id="code1" role="region"><button aria-label="Copy to clipboard" class="copy-btn" title="Copy" type="button"><svg aria-hidden="true" focusable="false" height="14" viewbox="0 0 24 24" width="14"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z" fill="currentColor"></path></svg></button><div aria-hidden="true" class="copy-badge" role="status"><svg aria-hidden="true" focusable="false" height="16" viewbox="0 0 24 24" width="16"><path d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z" fill="currentColor"></path></svg> <span>Copied</span></div><div class="code-content" spellcheck="false">#include &lt;iostream&gt;<br>using namespace std;<br><br>int main() {<br>  cout &lt;&lt; "Hello, world!" &lt;&lt; endl;<br>  return 0;<br>}<br></div></computercode><h2>Variables and types</h2><p>C++ supports types such as <code>int</code>, <code>double</code>, <code>char</code>, and <code>string</code>. Use descriptive names to improve clarity.</p><computercode aria-label="Code block code2" class="computercode" id="code2" role="region"><button aria-label="Copy to clipboard" class="copy-btn" title="Copy" type="button"><svg aria-hidden="true" focusable="false" height="14" viewbox="0 0 24 24" width="14"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z" fill="currentColor"></path></svg></button><div aria-hidden="true" class="copy-badge" role="status"><svg aria-hidden="true" focusable="false" height="16" viewbox="0 0 24 24" width="16"><path d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z" fill="currentColor"></path></svg> <span>Copied</span></div><div class="code-content" spellcheck="false">int age = 15;<br>double weight = 52.3;<br>char grade = 'B';<br>string name = "Alice";<br></div></computercode><h2>Conditions</h2><p>C++ conditions use <code>if</code>, <code>else</code>, and <code>switch</code>. Braces <code>{ }</code> group instructions clearly.</p><computercode aria-label="Code block code3" class="computercode" id="code3" role="region"><button aria-label="Copy to clipboard" class="copy-btn" title="Copy" type="button"><svg aria-hidden="true" focusable="false" height="14" viewbox="0 0 24 24" width="14"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z" fill="currentColor"></path></svg></button><div aria-hidden="true" class="copy-badge" role="status"><svg aria-hidden="true" focusable="false" height="16" viewbox="0 0 24 24" width="16"><path d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z" fill="currentColor"></path></svg> <span>Copied</span></div><div class="code-content" spellcheck="false">int score = 85;<br>if (score &gt;= 50) {<br>  cout &lt;&lt; "Pass" &lt;&lt; endl;<br>} else {<br>  cout &lt;&lt; "Fail" &lt;&lt; endl;<br>}<br></div></computercode><h2>Loops</h2><p>Loops in C++ repeat tasks: <code>for</code> for counters, <code>while</code> for conditions. Keep logic short for clarity.</p><computercode aria-label="Code block code4" class="computercode" id="code4" role="region"><button aria-label="Copy to clipboard" class="copy-btn" title="Copy" type="button"><svg aria-hidden="true" focusable="false" height="14" viewbox="0 0 24 24" width="14"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z" fill="currentColor"></path></svg></button><div aria-hidden="true" class="copy-badge" role="status"><svg aria-hidden="true" focusable="false" height="16" viewbox="0 0 24 24" width="16"><path d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z" fill="currentColor"></path></svg> <span>Copied</span></div><div class="code-content" spellcheck="false">for (int i = 1; i &lt;= 3; i++) {<br>  cout &lt;&lt; "Count " &lt;&lt; i &lt;&lt; endl;<br>}<br></div></computercode><h2>Functions</h2><p>Functions help organize reusable logic. A return type must always be declared in C++.</p><computercode aria-label="Code block code5" class="computercode" id="code5" role="region"><button aria-label="Copy to clipboard" class="copy-btn" title="Copy" type="button"><svg aria-hidden="true" focusable="false" height="14" viewbox="0 0 24 24" width="14"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z" fill="currentColor"></path></svg></button><div aria-hidden="true" class="copy-badge" role="status"><svg aria-hidden="true" focusable="false" height="16" viewbox="0 0 24 24" width="16"><path d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z" fill="currentColor"></path></svg> <span>Copied</span></div><div class="code-content" spellcheck="false">int multiply(int x, int y) {<br>  return x * y;<br>}<br></div></computercode><h2>Final example — calculator for subtraction</h2><p>The following C++ program reads two numbers, subtracts them, and prints the difference. Save as <em>main.cpp</em> and compile with <code>g++ main.cpp -o main</code>.</p><h4>main.cpp</h4><computercode aria-label="Code block code6" class="computercode" id="code6" role="region"><button aria-label="Copy to clipboard" class="copy-btn" title="Copy" type="button"><svg aria-hidden="true" focusable="false" height="14" viewbox="0 0 24 24" width="14"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z" fill="currentColor"></path></svg></button><div aria-hidden="true" class="copy-badge" role="status"><svg aria-hidden="true" focusable="false" height="16" viewbox="0 0 24 24" width="16"><path d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z" fill="currentColor"></path></svg> <span>Copied</span></div><div class="code-content" spellcheck="false">#include &lt;iostream&gt;<br>using namespace std;<br><br>int main() {<br>  double minuend, subtrahend, difference;<br>  cout &lt;&lt; "Enter minuend: ";<br>  cin &gt;&gt; minuend;<br>  cout &lt;&lt; "Enter subtrahend: ";<br>  cin &gt;&gt; subtrahend;<br>  difference = minuend - subtrahend;<br>  cout &lt;&lt; "Difference: " &lt;&lt; difference &lt;&lt; endl;<br>  return 0;<br>}<br></div></computercode><h2>MCQs</h2><p><span>1. Which header file is required for input and output in C++?</span></p><p>(a) stdio.h</p><p>(b) iostream</p><p>(c) conio.h</p><p>(d) string.h</p><button class="answer-btn" onclick="showBtnAnswer1()">Answer</button><p class="answer-option" id="answer1">► (b) iostream</p><p><span>2. What is the correct file extension for a C++ source file?</span></p><p>(a) .c</p><p>(b) .cpp</p><p>(c) .ccs</p><p>(d) .cp</p><button class="answer-btn" onclick="showBtnAnswer2()">Answer</button><p class="answer-option" id="answer2">► (b) .cpp</p><p><span>3. Which operator is used with cout to send data to the output stream?</span></p><p>(a) &gt;&gt;</p><p>(b) &lt;&lt;</p><p>(c) :</p><p>(d) :=</p><button class="answer-btn" onclick="showBtnAnswer3()">Answer</button><p class="answer-option" id="answer3">► (b) &lt;&lt;</p><p><span>4. Which C++ statement declares a variable that stores a decimal number?</span></p><p>(a) int x;</p><p>(b) float x;</p><p>(c) double x;</p><p>(d) Both (b) and (c)</p><button class="answer-btn" onclick="showBtnAnswer4()">Answer</button><p class="answer-option" id="answer4">► (d) Both (b) and (c)</p><p><span>5. Which statement is true about C++ strings?</span></p><p>(a) They are arrays of characters ending with '\0'</p><p>(b) They can be used with the string class in &lt;string&gt;</p><p>(c) Both (a) and (b) are correct</p><p>(d) None of the above</p><button class="answer-btn" onclick="showBtnAnswer5()">Answer</button><p class="answer-option" id="answer5">► (c) Both (a) and (b) are correct</p><p><span>6. What will the condition (7 &lt; 3) evaluate to in C++?</span></p><p>(a) true</p><p>(b) false</p><p>(c) 1</p><p>(d) 0</p><button class="answer-btn" onclick="showBtnAnswer6()">Answer</button><p class="answer-option" id="answer6">► (d) 0</p><p><span>7. Which loop in C++ is guaranteed to execute at least once?</span></p><p>(a) for</p><p>(b) while</p><p>(c) do...while</p><p>(d) foreach</p><button class="answer-btn" onclick="showBtnAnswer7()">Answer</button><p class="answer-option" id="answer7">► (c) do...while</p><p><span>8. Which operator is used for equality comparison in C++?</span></p><p>(a) =</p><p>(b) ==</p><p>(c) !=</p><p>(d) :=</p><button class="answer-btn" onclick="showBtnAnswer8()">Answer</button><p class="answer-option" id="answer8">► (b) ==</p><p><span>9. Which is a valid C++ function definition?</span></p><p>(a) int add(x, y) { return x + y }</p><p>(b) int add(int x, int y) { return x + y; }</p><p>(c) function add(int x, int y) return x + y;</p><p>(d) def add(x, y): return x + y</p><button class="answer-btn" onclick="showBtnAnswer9()">Answer</button><p class="answer-option" id="answer9">► (b) int add(int x, int y) { return x + y; }</p><p><span>10. Which statement about C++ arrays is correct?</span></p><p>(a) Array indexes start at 1</p><p>(b) Array indexes start at 0</p><p>(c) The size of the array can grow automatically</p><p>(d) Arrays can only store characters</p><button class="answer-btn" onclick="showBtnAnswer10()">Answer</button><p class="answer-option" id="answer10">► (b) Array indexes start at 0</p><p><span>11. What is the correct syntax for including a standard header in C++?</span></p><p>(a) #include &lt;filename&gt;</p><p>(b) include "filename"</p><p>(c) import filename</p><p>(d) #header filename</p><button class="answer-btn" onclick="showBtnAnswer11()">Answer</button><p class="answer-option" id="answer11">► (a) #include &lt;filename&gt;</p><p><span>12. Which keyword allows using names from the std namespace directly?</span></p><p>(a) using namespace std;</p><p>(b) include std;</p><p>(c) import std;</p><p>(d) namespace std();</p><button class="answer-btn" onclick="showBtnAnswer12()">Answer</button><p class="answer-option" id="answer12">► (a) using namespace std;</p><p><span>13. Which operator is used to access members of a class or struct through an object?</span></p><p>(a) .</p><p>(b) -&gt;</p><p>(c) ::</p><p>(d) *</p><button class="answer-btn" onclick="showBtnAnswer13()">Answer</button><p class="answer-option" id="answer13">► (a) .</p><p><span>14. Which operator is used to access members through a pointer to an object?</span></p><p>(a) .</p><p>(b) -&gt;</p><p>(c) *</p><p>(d) ::</p><button class="answer-btn" onclick="showBtnAnswer14()">Answer</button><p class="answer-option" id="answer14">► (b) -&gt;</p><p><span>15. Which keyword stops a loop and transfers control after it?</span></p><p>(a) stop</p><p>(b) break</p><p>(c) exit</p><p>(d) continue</p><button class="answer-btn" onclick="showBtnAnswer15()">Answer</button><p class="answer-option" id="answer15">► (b) break</p><p><span>16. Which C++ operator creates a new object dynamically?</span></p><p>(a) malloc</p><p>(b) allocate</p><p>(c) new</p><p>(d) create</p><button class="answer-btn" onclick="showBtnAnswer16()">Answer</button><p class="answer-option" id="answer16">► (c) new</p><p><span>17. Which keyword is used to define a class in C++?</span></p><p>(a) object</p><p>(b) class</p><p>(c) defclass</p><p>(d) structclass</p><button class="answer-btn" onclick="showBtnAnswer17()">Answer</button><p class="answer-option" id="answer17">► (b) class</p><p><span>18. In the subtraction calculator, which variables store the inputs?</span></p><p>(a) x and y</p><p>(b) first and second</p><p>(c) minuend and subtrahend</p><p>(d) num1 and num2</p><button class="answer-btn" onclick="showBtnAnswer18()">Answer</button><p class="answer-option" id="answer18">► (c) minuend and subtrahend</p></section><footer class="tern-footer"><div class="footer-container"><div class="footer-column logo-quote-col"><div class="footer-logo"><img alt="Wabne Logo" src="/favicon.gif"> <span>Wabne</span></div><p class="footer-quote">"The beautiful thing about learning is nobody can take it away from you." – B.B. King</p></div><div class="footer-column landscapely"><h3>Quick Links</h3><ul><li><a href="/#home">Home</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#about-us">About Us</a></li><li><a href="/knomau/">Know More About Us</a></li></ul></div><div class="footer-column landscapely"><h3>Class 6<sup>th</sup></h3><ul><li><a href="/sixth/#s1">Maths</a></li><li><a href="/sixth/#s2">Science</a></li><li><a href="/sixth/#s3">Social Science</a></li><li><a href="/sixth/#s4">Computer Science</a></li></ul></div><div class="footer-column landscapely"><h3>Class 7<sup>th</sup></h3><ul><li><a href="/seventh/#s1">Maths</a></li><li><a href="/seventh/#s2">Science</a></li><li><a href="/seventh/#s3">Social Science</a></li><li><a href="/seventh/#s4">Computer Science</a></li></ul></div><div class="footer-column landscapely"><h3>Class 8<sup>th</sup></h3><ul><li><a href="/eighth/#s1">Maths</a></li><li><a href="/eighth/#s2">Science</a></li><li><a href="/eighth/#s3">Social Science</a></li><li><a href="/eighth/#s4">Computer Science</a></li></ul></div></div><div class="Maha-division portraitly"><div class="footer-column"><h3>Quick Links</h3><ul><li><a href="/#home">Home</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#about-us">About Us</a></li><li><a href="/knomau/">Know More About Us</a></li></ul></div><div class="footer-column"><h3>Class 6<sup>th</sup></h3><ul><li><a href="/sixth/#s1">Maths</a></li><li><a href="/sixth/#s2">Science</a></li><li><a href="/sixth/#s3">Social Science</a></li><li><a href="/sixth/#s4">Computer Science</a></li></ul></div></div><div class="Maha-division portraitly"><div class="footer-column"><h3>Class 7<sup>th</sup></h3><ul><li><a href="/seventh/#s1">Maths</a></li><li><a href="/seventh/#s2">Science</a></li><li><a href="/seventh/#s3">Social Science</a></li><li><a href="/seventh/#s4">Computer Science</a></li></ul></div><div class="footer-column"><h3>Class 8<sup>th</sup></h3><ul><li><a href="/eighth/#s1">Maths</a></li><li><a href="/eighth/#s2">Science</a></li><li><a href="/eighth/#s3">Social Science</a></li><li><a href="/eighth/#s4">Computer Science</a></li></ul></div></div><div class="footer-bottom">© 2025 Wabne. All rights reserved.</div></footer></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    content="width=device-width,initial-scale=1"
+    name="viewport"
+  /><title>Wabne - Class 6 - Computer Science - Chapter 7</title
+  ><link href="/style.css" rel="stylesheet" />
+  <script defer="defer" src="/script.js"></script>
+  <link href="/favicon.gif" rel="shortcut icon" type="image/x-icon" />
+  <nav>
+    <a href="/"><img alt="Logo" class="logo" src="/favicon.gif" /></a>
+    <div class="title">Wabne</div>
+    <ul class="nav-menu">
+      <li><a class="nav-link" href="/#home">Home</a></li>
+      <li><a class="nav-link" href="/#courses">Courses</a></li>
+      <li><a class="nav-link" href="/#about-us">About Us</a></li>
+      <li><a class="nav-link" href="/#choose-div">Why Us?</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span> <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+  <section class="chapter">
+    <h1>C++</h1>
+    <img class="paspo" src="/cpp.png" />
+    <p>
+      C++ extends C with object-oriented features, stronger type checks, and
+      libraries for data structures, algorithms, and more. It is used in
+      software ranging from operating systems to games. Programs are saved with
+      a <em>.cpp</em> extension and compiled with compilers like g++. Clear
+      structure in C++ means organizing code into functions and classes with
+      readable naming. This chapter introduces basics such as output with
+      <code>cout</code>, variables, conditions, loops, functions, and ends with
+      a subtraction calculator as the final example.
+    </p>
+    <h2>Hello world</h2>
+    <p>
+      The first program includes <code>iostream</code> for input and output and
+      uses <code>cout</code>.
+    </p>
+    <computercode
+      aria-label="Code block code1"
+      class="computercode"
+      id="code1"
+      role="region"
+      ><button
+        aria-label="Copy to clipboard"
+        class="copy-btn"
+        title="Copy"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="14"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path
+            d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </button>
+      <div aria-hidden="true" class="copy-badge" role="status">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          viewbox="0 0 24 24"
+          width="16"
+        >
+          <path
+            d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span>Copied</span>
+      </div>
+      <div class="code-content" spellcheck="false">
+        #include &lt;iostream&gt;<br />using namespace std;<br /><br />int
+        main() {<br />  cout &lt;&lt; "Hello, world!" &lt;&lt; endl;<br />  return
+        0;<br />}<br /></div
+    ></computercode>
+    <h2>Variables and types</h2>
+    <p>
+      C++ supports types such as <code>int</code>, <code>double</code>,
+      <code>char</code>, and <code>string</code>. Use descriptive names to
+      improve clarity.
+    </p>
+    <computercode
+      aria-label="Code block code2"
+      class="computercode"
+      id="code2"
+      role="region"
+      ><button
+        aria-label="Copy to clipboard"
+        class="copy-btn"
+        title="Copy"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="14"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path
+            d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </button>
+      <div aria-hidden="true" class="copy-badge" role="status">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          viewbox="0 0 24 24"
+          width="16"
+        >
+          <path
+            d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span>Copied</span>
+      </div>
+      <div class="code-content" spellcheck="false">
+        int age = 15;<br />double weight = 52.3;<br />char grade = 'B';<br />string
+        name = "Alice";<br /></div
+    ></computercode>
+    <h2>Conditions</h2>
+    <p>
+      C++ conditions use <code>if</code>, <code>else</code>, and
+      <code>switch</code>. Braces <code>{ }</code> group instructions clearly.
+    </p>
+    <computercode
+      aria-label="Code block code3"
+      class="computercode"
+      id="code3"
+      role="region"
+      ><button
+        aria-label="Copy to clipboard"
+        class="copy-btn"
+        title="Copy"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="14"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path
+            d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </button>
+      <div aria-hidden="true" class="copy-badge" role="status">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          viewbox="0 0 24 24"
+          width="16"
+        >
+          <path
+            d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span>Copied</span>
+      </div>
+      <div class="code-content" spellcheck="false">
+        int score = 85;<br />if (score &gt;= 50) {<br />  cout &lt;&lt; "Pass"
+        &lt;&lt; endl;<br />} else {<br />  cout &lt;&lt; "Fail" &lt;&lt;
+        endl;<br />}<br /></div
+    ></computercode>
+    <h2>Loops</h2>
+    <p>
+      Loops in C++ repeat tasks: <code>for</code> for counters,
+      <code>while</code> for conditions. Keep logic short for clarity.
+    </p>
+    <computercode
+      aria-label="Code block code4"
+      class="computercode"
+      id="code4"
+      role="region"
+      ><button
+        aria-label="Copy to clipboard"
+        class="copy-btn"
+        title="Copy"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="14"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path
+            d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </button>
+      <div aria-hidden="true" class="copy-badge" role="status">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          viewbox="0 0 24 24"
+          width="16"
+        >
+          <path
+            d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span>Copied</span>
+      </div>
+      <div class="code-content" spellcheck="false">
+        for (int i = 1; i &lt;= 3; i++) {<br />  cout &lt;&lt; "Count " &lt;&lt;
+        i &lt;&lt; endl;<br />}<br /></div
+    ></computercode>
+    <h2>Functions</h2>
+    <p>
+      Functions help organize reusable logic. A return type must always be
+      declared in C++.
+    </p>
+    <computercode
+      aria-label="Code block code5"
+      class="computercode"
+      id="code5"
+      role="region"
+      ><button
+        aria-label="Copy to clipboard"
+        class="copy-btn"
+        title="Copy"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="14"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path
+            d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </button>
+      <div aria-hidden="true" class="copy-badge" role="status">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          viewbox="0 0 24 24"
+          width="16"
+        >
+          <path
+            d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span>Copied</span>
+      </div>
+      <div class="code-content" spellcheck="false">
+        int multiply(int x, int y) {<br />  return x * y;<br />}<br /></div
+    ></computercode>
+    <h2>Final example — calculator for subtraction</h2>
+    <p>
+      The following C++ program reads two numbers, subtracts them, and prints
+      the difference. Save as <em>main.cpp</em> and compile with
+      <code>g++ main.cpp -o main</code>.
+    </p>
+    <h4>main.cpp</h4>
+    <computercode
+      aria-label="Code block code6"
+      class="computercode"
+      id="code6"
+      role="region"
+      ><button
+        aria-label="Copy to clipboard"
+        class="copy-btn"
+        title="Copy"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="14"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path
+            d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </button>
+      <div aria-hidden="true" class="copy-badge" role="status">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          viewbox="0 0 24 24"
+          width="16"
+        >
+          <path
+            d="M9 16.17L4.83 12 3.41 13.41 9 19 21 7 19.59 5.59z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span>Copied</span>
+      </div>
+      <div class="code-content" spellcheck="false">
+        #include &lt;iostream&gt;<br />using namespace std;<br /><br />int
+        main() {<br />  double minuend, subtrahend, difference;<br />  cout
+        &lt;&lt; "Enter minuend: ";<br />  cin &gt;&gt; minuend;<br />  cout
+        &lt;&lt; "Enter subtrahend: ";<br />  cin &gt;&gt; subtrahend;<br />  difference
+        = minuend - subtrahend;<br />  cout &lt;&lt; "Difference: " &lt;&lt;
+        difference &lt;&lt; endl;<br />  return 0;<br />}<br /></div
+    ></computercode>
+    <h2>MCQs</h2>
+    <p>
+      <span>1. Which header file is required for input and output in C++?</span>
+    </p>
+    <p>(a) stdio.h</p>
+    <p>(b) iostream</p>
+    <p>(c) conio.h</p>
+    <p>(d) string.h</p>
+    <button class="answer-btn" onclick="showBtnAnswer1()">Answer</button>
+    <p class="answer-option" id="answer1">► (b) iostream</p>
+    <p>
+      <span>2. What is the correct file extension for a C++ source file?</span>
+    </p>
+    <p>(a) .c</p>
+    <p>(b) .cpp</p>
+    <p>(c) .ccs</p>
+    <p>(d) .cp</p>
+    <button class="answer-btn" onclick="showBtnAnswer2()">Answer</button>
+    <p class="answer-option" id="answer2">► (b) .cpp</p>
+    <p>
+      <span
+        >3. Which operator is used with cout to send data to the output
+        stream?</span
+      >
+    </p>
+    <p>(a) &gt;&gt;</p>
+    <p>(b) &lt;&lt;</p>
+    <p>(c) :</p>
+    <p>(d) :=</p>
+    <button class="answer-btn" onclick="showBtnAnswer3()">Answer</button>
+    <p class="answer-option" id="answer3">► (b) &lt;&lt;</p>
+    <p>
+      <span
+        >4. Which C++ statement declares a variable that stores a decimal
+        number?</span
+      >
+    </p>
+    <p>(a) int x;</p>
+    <p>(b) float x;</p>
+    <p>(c) double x;</p>
+    <p>(d) Both (b) and (c)</p>
+    <button class="answer-btn" onclick="showBtnAnswer4()">Answer</button>
+    <p class="answer-option" id="answer4">► (d) Both (b) and (c)</p>
+    <p><span>5. Which statement is true about C++ strings?</span></p>
+    <p>(a) They are arrays of characters ending with '\0'</p>
+    <p>(b) They can be used with the string class in &lt;string&gt;</p>
+    <p>(c) Both (a) and (b) are correct</p>
+    <p>(d) None of the above</p>
+    <button class="answer-btn" onclick="showBtnAnswer5()">Answer</button>
+    <p class="answer-option" id="answer5">► (c) Both (a) and (b) are correct</p>
+    <p>
+      <span>6. What will the condition (7 &lt; 3) evaluate to in C++?</span>
+    </p>
+    <p>(a) true</p>
+    <p>(b) false</p>
+    <p>(c) 1</p>
+    <p>(d) 0</p>
+    <button class="answer-btn" onclick="showBtnAnswer6()">Answer</button>
+    <p class="answer-option" id="answer6">► (d) 0</p>
+    <p>
+      <span>7. Which loop in C++ is guaranteed to execute at least once?</span>
+    </p>
+    <p>(a) for</p>
+    <p>(b) while</p>
+    <p>(c) do...while</p>
+    <p>(d) foreach</p>
+    <button class="answer-btn" onclick="showBtnAnswer7()">Answer</button>
+    <p class="answer-option" id="answer7">► (c) do...while</p>
+    <p>
+      <span>8. Which operator is used for equality comparison in C++?</span>
+    </p>
+    <p>(a) =</p>
+    <p>(b) ==</p>
+    <p>(c) !=</p>
+    <p>(d) :=</p>
+    <button class="answer-btn" onclick="showBtnAnswer8()">Answer</button>
+    <p class="answer-option" id="answer8">► (b) ==</p>
+    <p><span>9. Which is a valid C++ function definition?</span></p>
+    <p>(a) int add(x, y) { return x + y }</p>
+    <p>(b) int add(int x, int y) { return x + y; }</p>
+    <p>(c) function add(int x, int y) return x + y;</p>
+    <p>(d) def add(x, y): return x + y</p>
+    <button class="answer-btn" onclick="showBtnAnswer9()">Answer</button>
+    <p class="answer-option" id="answer9">
+      ► (b) int add(int x, int y) { return x + y; }
+    </p>
+    <p><span>10. Which statement about C++ arrays is correct?</span></p>
+    <p>(a) Array indexes start at 1</p>
+    <p>(b) Array indexes start at 0</p>
+    <p>(c) The size of the array can grow automatically</p>
+    <p>(d) Arrays can only store characters</p>
+    <button class="answer-btn" onclick="showBtnAnswer10()">Answer</button>
+    <p class="answer-option" id="answer10">► (b) Array indexes start at 0</p>
+    <p>
+      <span
+        >11. What is the correct syntax for including a standard header in
+        C++?</span
+      >
+    </p>
+    <p>(a) #include &lt;filename&gt;</p>
+    <p>(b) include "filename"</p>
+    <p>(c) import filename</p>
+    <p>(d) #header filename</p>
+    <button class="answer-btn" onclick="showBtnAnswer11()">Answer</button>
+    <p class="answer-option" id="answer11">► (a) #include &lt;filename&gt;</p>
+    <p>
+      <span
+        >12. Which keyword allows using names from the std namespace
+        directly?</span
+      >
+    </p>
+    <p>(a) using namespace std;</p>
+    <p>(b) include std;</p>
+    <p>(c) import std;</p>
+    <p>(d) namespace std();</p>
+    <button class="answer-btn" onclick="showBtnAnswer12()">Answer</button>
+    <p class="answer-option" id="answer12">► (a) using namespace std;</p>
+    <p>
+      <span
+        >13. Which operator is used to access members of a class or struct
+        through an object?</span
+      >
+    </p>
+    <p>(a) .</p>
+    <p>(b) -&gt;</p>
+    <p>(c) ::</p>
+    <p>(d) *</p>
+    <button class="answer-btn" onclick="showBtnAnswer13()">Answer</button>
+    <p class="answer-option" id="answer13">► (a) .</p>
+    <p>
+      <span
+        >14. Which operator is used to access members through a pointer to an
+        object?</span
+      >
+    </p>
+    <p>(a) .</p>
+    <p>(b) -&gt;</p>
+    <p>(c) *</p>
+    <p>(d) ::</p>
+    <button class="answer-btn" onclick="showBtnAnswer14()">Answer</button>
+    <p class="answer-option" id="answer14">► (b) -&gt;</p>
+    <p>
+      <span
+        >15. Which keyword stops a loop and transfers control after it?</span
+      >
+    </p>
+    <p>(a) stop</p>
+    <p>(b) break</p>
+    <p>(c) exit</p>
+    <p>(d) continue</p>
+    <button class="answer-btn" onclick="showBtnAnswer15()">Answer</button>
+    <p class="answer-option" id="answer15">► (b) break</p>
+    <p><span>16. Which C++ operator creates a new object dynamically?</span></p>
+    <p>(a) malloc</p>
+    <p>(b) allocate</p>
+    <p>(c) new</p>
+    <p>(d) create</p>
+    <button class="answer-btn" onclick="showBtnAnswer16()">Answer</button>
+    <p class="answer-option" id="answer16">► (c) new</p>
+    <p><span>17. Which keyword is used to define a class in C++?</span></p>
+    <p>(a) object</p>
+    <p>(b) class</p>
+    <p>(c) defclass</p>
+    <p>(d) structclass</p>
+    <button class="answer-btn" onclick="showBtnAnswer17()">Answer</button>
+    <p class="answer-option" id="answer17">► (b) class</p>
+    <p>
+      <span
+        >18. In the subtraction calculator, which variables store the
+        inputs?</span
+      >
+    </p>
+    <p>(a) x and y</p>
+    <p>(b) first and second</p>
+    <p>(c) minuend and subtrahend</p>
+    <p>(d) num1 and num2</p>
+    <button class="answer-btn" onclick="showBtnAnswer18()">Answer</button>
+    <p class="answer-option" id="answer18">► (c) minuend and subtrahend</p>
+  </section>
+  <footer class="tern-footer">
+    <div class="footer-container">
+      <div class="footer-column logo-quote-col">
+        <div class="footer-logo">
+          <img alt="Wabne Logo" src="/favicon.gif" /> <span>Wabne</span>
+        </div>
+        <p class="footer-quote">
+          "The beautiful thing about learning is nobody can take it away from
+          you." – B.B. King
+        </p>
+      </div>
+      <div class="footer-column landscapely">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#courses">Courses</a></li>
+          <li><a href="/#about-us">About Us</a></li>
+          <li><a href="/knomau/">Know More About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column landscapely">
+        <h3>Class 6<sup>th</sup></h3>
+        <ul>
+          <li><a href="/sixth/#s1">Maths</a></li>
+          <li><a href="/sixth/#s2">Science</a></li>
+          <li><a href="/sixth/#s3">Social Science</a></li>
+          <li><a href="/sixth/#s4">Computer Science</a></li>
+        </ul>
+      </div>
+      <div class="footer-column landscapely">
+        <h3>Class 7<sup>th</sup></h3>
+        <ul>
+          <li><a href="/seventh/#s1">Maths</a></li>
+          <li><a href="/seventh/#s2">Science</a></li>
+          <li><a href="/seventh/#s3">Social Science</a></li>
+          <li><a href="/seventh/#s4">Computer Science</a></li>
+        </ul>
+      </div>
+      <div class="footer-column landscapely">
+        <h3>Class 8<sup>th</sup></h3>
+        <ul>
+          <li><a href="/eighth/#s1">Maths</a></li>
+          <li><a href="/eighth/#s2">Science</a></li>
+          <li><a href="/eighth/#s3">Social Science</a></li>
+          <li><a href="/eighth/#s4">Computer Science</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="Maha-division portraitly">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#courses">Courses</a></li>
+          <li><a href="/#about-us">About Us</a></li>
+          <li><a href="/knomau/">Know More About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Class 6<sup>th</sup></h3>
+        <ul>
+          <li><a href="/sixth/#s1">Maths</a></li>
+          <li><a href="/sixth/#s2">Science</a></li>
+          <li><a href="/sixth/#s3">Social Science</a></li>
+          <li><a href="/sixth/#s4">Computer Science</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="Maha-division portraitly">
+      <div class="footer-column">
+        <h3>Class 7<sup>th</sup></h3>
+        <ul>
+          <li><a href="/seventh/#s1">Maths</a></li>
+          <li><a href="/seventh/#s2">Science</a></li>
+          <li><a href="/seventh/#s3">Social Science</a></li>
+          <li><a href="/seventh/#s4">Computer Science</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Class 8<sup>th</sup></h3>
+        <ul>
+          <li><a href="/eighth/#s1">Maths</a></li>
+          <li><a href="/eighth/#s2">Science</a></li>
+          <li><a href="/eighth/#s3">Social Science</a></li>
+          <li><a href="/eighth/#s4">Computer Science</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Wabne. All rights reserved.</div>
+  </footer>
+</html>
