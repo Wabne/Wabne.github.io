@@ -1,0 +1,13 @@
+{
+  "name": "Wabne",
+  "short_name": "Wabne",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.gif",
+      "sizes": "512x512",
+      "type": "image/gif"
+    }
+  ]
+}
