@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wabne.github.io/sitemap.xml
